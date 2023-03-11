@@ -74,6 +74,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tf_extencionarch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="dive.google.com/"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>

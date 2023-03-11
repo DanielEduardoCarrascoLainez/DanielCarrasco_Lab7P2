@@ -18,7 +18,7 @@ public class JFMain extends javax.swing.JFrame {
     public static int numerito(int minimo, int maximo) {
         return ThreadLocalRandom.current().nextInt(minimo, maximo + 1);
     }
-    int CantidadL=5;
+    int CantidadL=10;
     public static String Aleatorios(int CantidadL){
         String letras= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String aleatorios= "";
@@ -71,6 +71,8 @@ public class JFMain extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setText("Extension");
+
+        tf_extencionarch.setText("dive.google.com/");
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setText("Tamaño");
@@ -204,8 +206,9 @@ public class JFMain extends javax.swing.JFrame {
         String extencionArc=tf_extencionarch.getText();
         double tamanioArc= Double.parseDouble(tf_tamanio.getText());
         String cadenaAlearotia=Aleatorios(CantidadL);
+        String linkArc= extencionArc+cadenaAlearotia;
         
-        Archivos archivo= new Archivos (nombreArc,cadenaAlearotia,extencionArc,tamanioArc);
+        Archivos archivo= new Archivos (nombreArc,linkArc,extencionArc,tamanioArc);
         listaA.add(archivo);
         
         tf_nombreArch.setText("");
